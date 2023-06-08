@@ -34,7 +34,7 @@ const index = () => {
           console.log(error);
         });
     })();
-  });
+  },[]);
 
   const images = [Splash1, Splash2, Splash3, Splash4, Splash5, Splash6];
 
@@ -85,7 +85,7 @@ const index = () => {
             </Link>
           </View>
           <Text className="text-white text-center">
-            Already have an account? <Link href="splash/login">Sign in</Link>
+            Already have an account? <Link href={{pathname: "splash/login", replace: true}}>Sign in</Link>
           </Text>
         </View>
       </SafeAreaView>

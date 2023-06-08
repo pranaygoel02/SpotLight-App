@@ -9,6 +9,7 @@ const Input = ({
   cb,
   inputMode,
   keyboard,
+  leftIcon,
   rightIcon
 }) => {
   return (
@@ -17,6 +18,7 @@ const Input = ({
       <View
         className="text-white border-[1.5px] pr-10 bg-neutral-900 border-neutral-800 focus:border-[#B615DD] focus:border-opacity-70  rounded-[18px] flex flex-row justify-between items-center"
       >
+        {leftIcon}
         <TextInput
           className="text-white p-4 w-full"
           autoComplete="off"

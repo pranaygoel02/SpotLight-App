@@ -12,7 +12,7 @@ import OAuth from '../../components/OAuth/index.js'
 
 const Login = () => {
 
-  const { inputs, validateMessage, loginUser } = LoginLogic();
+  const { inputs, validateMessage, loginUser, signingin } = LoginLogic();
 
   return (
     <KeyboardAvoidingView behavior="padding" className="bg-black">
@@ -30,8 +30,8 @@ const Login = () => {
               />
             ))
           }
-          <SplashButton text="Sign in" cb={loginUser}/>  
-          {validateMessage && <Text>{validateMessage}</Text>}
+          {validateMessage && <Text className='text-red-600 px-4'>{validateMessage}</Text>}
+          <SplashButton text="Sign in" cb={loginUser} loading={signingin}/>  
           <Text className="text-[#7b7b7b] text-center py-4">
             Don't have an account? <Link className='text-neutral-100' href="splash/signup">Sign up</Link>
           </Text>
