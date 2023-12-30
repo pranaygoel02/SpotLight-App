@@ -8,7 +8,7 @@ const _layout = () => {
     <Stack
       screenOptions={{
         header: (props) => {
-          return  <SplashHeader {...props.options} />
+          return  <SplashHeader paddingTop={true} {...props.options} />
         },
       }}
     ></Stack>

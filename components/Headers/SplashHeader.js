@@ -5,12 +5,12 @@ import { useRouter } from "expo-router";
 
 import MaterialIcons from "react-native-vector-icons/MaterialIcons";
 
-const SplashHeader = ({headerTitle, headerLeft}) => {
+const SplashHeader = ({headerTitle, headerLeft, paddingTop}) => {
 
     const router = useRouter()
 
   return (
-    <SafeAreaView className="flex flex-row w-full bg-black p-4 pt-12 items-center">
+    <SafeAreaView className={`flex flex-row w-full bg-black p-4 ${paddingTop && 'pt-12'} items-center`}>
       {headerLeft !== null && <TouchableOpacity
         title="Back"
         className="mr-4 p-2 aspect-square flex items-center justify-center rounded-[14px] border-2 border-neutral-600 shadow-lg"
